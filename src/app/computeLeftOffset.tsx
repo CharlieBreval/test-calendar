@@ -5,7 +5,7 @@ import { CalendarEvent } from "./types";
 const COLUMNS_COUNT = 6;
 
 export function computeLeftOffset(events: CalendarEvent[]) {
-    const columns: CalendarEvent[][] = Array.from(Array(6)).map((_) => []);
+    const columns: CalendarEvent[][] = Array.from(Array(COLUMNS_COUNT)).map((_) => []);
 
     for (let i = 0; i < events.length; i++) {
         const event = events[i];

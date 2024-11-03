@@ -32,7 +32,6 @@ export const Calendar = ({ calendarEvents }: { calendarEvents: CalendarEvent[] }
                 return <Event key={idx} event={event} />
             })}
         </div>
-
     </div>)
 
 }

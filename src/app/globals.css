@@ -19,3 +19,34 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.calendarWrapper {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: rgb(248, 247, 245);
+}
+
+.bar {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #e7e7e7;
+}
+
+.event {
+  position: absolute;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.eventContent {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  opacity: 0.8;
+}

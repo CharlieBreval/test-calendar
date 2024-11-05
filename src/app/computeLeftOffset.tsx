@@ -2,7 +2,7 @@ import { areOverlapping } from "./date.helper";
 import { CalendarEvent } from "./types";
 
 // We are setting up 6 columns, allowing to dispatch events with harmony
-const COLUMNS_COUNT = 100;
+const COLUMNS_COUNT = 1000;
 
 export function computeLeftOffset(events: CalendarEvent[]) {
     const columns: CalendarEvent[][] = Array.from(Array(COLUMNS_COUNT)).map((_) => []);
@@ -21,7 +21,6 @@ export function computeLeftOffset(events: CalendarEvent[]) {
 
                 // Fill our grid with the event we are placing
                 let maxLimit = (j + Math.floor(eventWidth));
-                
                 
                 for (let u = j; u < maxLimit; u++) {
                     columns[u].push(event);

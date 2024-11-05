@@ -13,7 +13,7 @@ export const Event = ({ event }: { event: CalendarEvent }) => {
     return (<div className="event" style={{
         top: `${verticalOffsetPercentage}%`,
         height: `${heightPercentage}%`,
-        width: `${100 / (event.concurrency ?? 1)}%`,
+        width: `${Math.floor(100 / (event.concurrency) ?? 1)}%`,
         left: `${(event.leftOffset ?? 0) * 100}%`,
         backgroundColor: `${event.color}`
     }}><div className="eventContent">{event.id}</div></div>)

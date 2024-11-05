@@ -17,5 +17,9 @@ export function areOverlapping(a: TimeInterval, b: TimeInterval): boolean {
 export function sortEvents(a: TimeInterval, b: TimeInterval): number {
     if (a.start < b.start) return -1;
     if (a.start > b.start) return 1;
+    if (a.start.getTime() === b.start.getTime()) {
+        if (a.end < b.end) return -1;
+        if (a.end > b.end) return 1;
+    }
     return 0
 }
